@@ -79,7 +79,7 @@ if is-callable 'dircolors'; then
 
   if zstyle -t ':prezto:module:utility:ls' color; then
     if [[ -s "$HOME/.dir_colors" ]]; then
-      eval "$(dircolors --sh "$HOME/.dir_colors")"
+      eval "$(dircolors --sh "$HOME/.dir_colors/dircolors")"
     else
       eval "$(dircolors --sh)"
     fi
