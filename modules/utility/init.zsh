@@ -57,8 +57,6 @@ alias po='popd'
 alias pu='pushd'
 alias sa='alias | grep -i'
 alias type='type -a'
-alias vi='vim'
-alias t='todo.sh -d ~/.todo.cfg'
 
 # Safe ops. Ask the user before doing anything destructive.
 alias rmi="${aliases[rm]:-rm} -i"
@@ -79,7 +77,7 @@ if is-callable 'dircolors'; then
 
   if zstyle -t ':prezto:module:utility:ls' color; then
     if [[ -s "$HOME/.dir_colors" ]]; then
-      eval "$(dircolors --sh "$HOME/.dir_colors/dircolors")"
+      eval "$(dircolors --sh "$HOME/.dir_colors")"
     else
       eval "$(dircolors --sh)"
     fi
